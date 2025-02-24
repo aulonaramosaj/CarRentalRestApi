@@ -1,0 +1,39 @@
+### User Registration
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+    "fullName": "Full Name",
+    "email": "email@mail.com",
+    "username": "username",
+    "password": "password123"
+}
+
+### User Login
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "username": "username",
+    "password": "password123"
+}
+
+### Get User Profile
+GET http://localhost:3000/my-profile
+x-auth-token: {token}
+
+### List Rental Cars
+GET http://localhost:3000/rental-cars
+
+### Create Rental Cars
+POST http://localhost:3000/rental-cars
+Content-Type: application/json
+
+{
+    "name": "BMW X5",
+    "price_per_day": 75.0,
+    "year": 2020,
+    "color": "white",
+    "steering_type": "automatic",
+    "number_of_seats": 5
+}
